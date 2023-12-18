@@ -12,13 +12,13 @@ We will launch the services using
 Then we can launch the accounts service and the web service using ```./gradlew accounts:bootRun``` and ``` ./gradlew web:bootRun```
 
 ### Accounts Service launched on port 2222
-![Accounts Service launched on port 2222](accounts-service-2222.png)
+![Accounts Service launched on port 2222](accounts-service-port-2222.png)
 ### Web Service launched on port 4444
-![Web Service launched on port 4444](web-service-4444.png)
+![Web Service launched on port 4444](web-service-port-4444.png)
 
 We can check on eureka if the services are launched and registered.
 ## The service registration service has these two services registered
-![Eureka Dashboard with 2 registered services](eureka-dashboard-2-services.png)
+![Eureka Dashboard with 2 registered services](eureka-dashbord-2-services.png)
 
 
 ## Update the configuration repository so that the accounts service uses now the port 3333.
@@ -31,7 +31,7 @@ Let's run a second instance of the accounts service using the new configuration 
 ```
 Both of the instances of the accounts service are running simultaneously and both are registered in Eureka.
 
-![Eureka Dashboard with 2 registered accounts services](eureka-dashboard-2-accounts-services.png)
+![Eureka Dashboard with 2 registered accounts services](eureka-dashbord-2-accounts-services.png)
 
 ## Kill Accounts Service at port 2222 and do a request to Web Service
 When we kill the first accounts service at port 2222, Eureka will detect that that service has failed and will delete it from the list of account services.
